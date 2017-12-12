@@ -49,9 +49,7 @@ COPY src/ /opt/src/
 # gzip --best read_qc_3p2.tar
 # split -n 10 -d read_qc_3p2.tar.gz read_qc_3p2.tar.gz.partial.
 # 
-RUN cat /opt/src/read_qc_3p2.tar.gz.partial.* > /opt/src/read_qc_3p2.tar.gz
-RUN tar xvPf /opt/src/read_qc_3p2.tar.gz
-RUN rm /opt/src/read_qc_3p2.tar.gz*
+RUN cat /opt/src/read_qc_3p2.tar.gz.partial.* > /opt/src/read_qc_3p2.tar.gz && tar xvPf /opt/src/read_qc_3p2.tar.gz && rm /opt/src/read_qc_3p2.tar.gz*
 ENV PYTHONPATH /gsap/assembly_analysis/gaemr-packages/GAEMR/
 ENV GAEMR_HOME /gsap/assembly_analysis/gaemr-packages/GAEMR/
 ENV GAEMR_VERSION 1.0.0
