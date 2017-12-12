@@ -16,7 +16,7 @@ task read_qc {
 
     String output_disk_gb
     String boot_disk_gb = "10"
-    String ram_gb = "8"
+    String ram_gb = "6"
     String cpu_cores = "2"
 
 
@@ -97,6 +97,15 @@ report_pipeline_fn = os.path.join(outdir, 'qc', '%s.pdf'%sample_id)
 run('ln  %s %s'%(metric_pipeline_fn, metric_out_fn))
 run('ln  %s %s'%(report_pipeline_fn, report_out_fn))
 
+fid = open(metric_pipeline_fn)
+indict = csv.DictReader(fid, dialect='excel-tab')
+line = indict.next()
+fid.close()
+
+estimate_library_size_out_fn = '%s_%s_%s.estimate_library_size.txt'%(parent_ssf, labset_ssf, sample_id)
+fid = open(estimate_library_size_out_fn,'w')
+fid.write(line['estimate_library_size'])
+fid.close()
 
 #########################
 # end task-specific calls
@@ -125,7 +134,7 @@ run('/opt/src/algutil/monitor_stop.py')
         File read_qc_table="${parent_ssf}_${labset_ssf}_${sample_id}.metrics.txt"
         File read_qc_pdf="${parent_ssf}_${labset_ssf}_${sample_id}.pdf"
         File read_qc_debug_bundle="debug_bundle.tar.gz"
-        Int test_metric=42
+        String read_qc_estimate_library_size = read_string("${parent_ssf}_${labset_ssf}_${sample_id}.estimate_library_size.txt")
         File monitor_start="monitor_start.log"
         File monitor_stop="monitor_stop.log"
         File dstat="dstat.log"
