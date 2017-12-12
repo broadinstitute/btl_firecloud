@@ -1,0 +1,14 @@
+{
+  "read_qc_workflow.read_qc.parent_ssf": "SSFDEV-290",
+  "read_qc_workflow.read_qc.labset_ssf": "SSFTEST-342",
+  "read_qc_workflow.read_qc.sample_id": "Kapa_Ecoli_MG1655_0.8XSPRI_2",
+  "read_qc_workflow.read_qc.genus": "Escherichia",
+  "read_qc_workflow.read_qc.species": "coli",
+  "read_qc_workflow.read_qc.strain": "MG1655",
+  "read_qc_workflow.read_qc.specimen_id": "",
+  "read_qc_workflow.read_qc.gnumber": "",
+  "read_qc_workflow.read_qc.ref_tarball": "test_data/Escherichia_coli_K12_MG1655_v2.tar.gz",
+  "read_qc_workflow.read_qc.r1_fq_path": "test_data/Kapa-Ecoli-MG1655-0-8XSPRI-2_S4_L001_R1_001.fastq.gz",
+  "read_qc_workflow.read_qc.r2_fq_path": "test_data/Kapa-Ecoli-MG1655-0-8XSPRI-2_S4_L001_R2_001.fastq.gz",
+  "read_qc_workflow.read_qc.output_disk_gb": "10"
+}

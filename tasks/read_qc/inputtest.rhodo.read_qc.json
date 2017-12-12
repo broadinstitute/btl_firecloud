@@ -1,0 +1,14 @@
+{
+  "read_qc_workflow.read_qc.parent_ssf": "SSFDEV-290",
+  "read_qc_workflow.read_qc.labset_ssf": "SSFTEST-342",
+  "read_qc_workflow.read_qc.sample_id": "Kapa_Rhodo_DoubleSidedSPRI_2",
+  "read_qc_workflow.read_qc.genus": "Rhodobacter",
+  "read_qc_workflow.read_qc.species": "sphaeroides",
+  "read_qc_workflow.read_qc.strain": "2.4.1",
+  "read_qc_workflow.read_qc.specimen_id": "",
+  "read_qc_workflow.read_qc.gnumber": "",
+  "read_qc_workflow.read_qc.ref_tarball": "test_data/Rhodobacter_sphaeroides_2.4.1_v1.tar.gz",
+  "read_qc_workflow.read_qc.r1_fq_path": "test_data/Kapa-Rhodo-DoubleSidedSPRI-2_S6_L001_R1_001.fastq.gz",
+  "read_qc_workflow.read_qc.r2_fq_path": "test_data/Kapa-Rhodo-DoubleSidedSPRI-2_S6_L001_R2_001.fastq.gz",
+  "read_qc_workflow.read_qc.output_disk_gb": "10"
+}
