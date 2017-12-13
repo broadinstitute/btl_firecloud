@@ -141,7 +141,7 @@ run('/opt/src/algutil/monitor_stop.py')
     }
 
     runtime {
-        docker: "gsaksena/read_qc:1"
+        docker: "gcr.io/btl-dockers/read_qc:1"
         memory: "${ram_gb}GB"
         cpu: "${cpu_cores}"
         disks: "local-disk ${output_disk_gb} HDD"
