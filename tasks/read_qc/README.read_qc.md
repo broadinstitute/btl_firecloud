@@ -10,8 +10,7 @@ gzip --best my_genome_build_v2.tar
 
 2) upload the fasta files and ref data to the bucket
 eg
-gsutil cp * gs://fc-a4c39031-98b7-4e1f-9937-eec981330527/test_data
-*** Directory naming conventions?
+gsutil cp <fastq_filename> gs://fc-caff18b3-53f8-4c71-9cc4-95236f8a0ece/seq/<ssf#>/<fastq_filename>
 
 3) Create a tsv loadfile containing the metadata.  Include the paths from the previous step
 Example lives in test_data/test_data.read_qc.participant.loadfile.txt
