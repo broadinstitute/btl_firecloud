@@ -5,7 +5,7 @@
 1) Create a tar.gz file containing the genome reference.  Ensure there is no directory structure inside the tarfile, and that there is only a single fasta file.  To reduce bulk, ensure there are no core files or BadCoverage.cache directories.
 eg 
 cd /location/of/genome/reference
-tar cvfz my_genome_build_v2.tar .
+tar cvf ../my_genome_build_v2.tar .
 gzip --best my_genome_build_v2.tar
 
 2) upload the fasta files and ref data to the bucket
