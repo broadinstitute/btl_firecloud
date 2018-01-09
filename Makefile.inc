@@ -209,7 +209,8 @@ buildclean: stage_build version_check
 	@docker images
 
 pushimage: task_check
-	docker push ${DOCKER_IMAGE_BASE}:${DOCKER_IMAGE_USERTAG}
+	#docker push ${DOCKER_IMAGE_BASE}:${DOCKER_IMAGE_USERTAG}
+	gcloud docker -- push ${DOCKER_IMAGE_BASE}
 
 pullimage: task_check
 	docker pull ${DOCKER_IMAGE_BASE}:${DOCKER_IMAGE_USERTAG}
