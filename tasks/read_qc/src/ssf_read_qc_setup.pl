@@ -115,9 +115,9 @@ my $qc_dir;
 
 &qcReads;
 
-&parseQc;
+#&parseQc;
 
-&writeOut;
+#&writeOut;
 
 
 ##############################################    Subroutines     ############################################
