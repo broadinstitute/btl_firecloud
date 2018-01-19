@@ -14,10 +14,14 @@ task read_qc {
     File r2_fq_path
     String bam_path=""
 
-    String output_disk_gb
+    Float fastq_size = size(r1_fq_path,"GB")
+    String output_disk_gb = ceil(fastq_size * 20)
+    String ram_gb = ceil(fastq_size + 1)
+
+    #String output_disk_gb
     String boot_disk_gb = "10"
-    String ram_gb = "6"
-    String cpu_cores = "2"
+    #String ram_gb = "6"
+    String cpu_cores = "1"
 
 
     command {
@@ -146,7 +150,7 @@ run('/opt/src/algutil/monitor_stop.py')
         cpu: "${cpu_cores}"
         disks: "local-disk ${output_disk_gb} HDD"
         bootDiskSizeGb: "${boot_disk_gb}"
-        preemptible: 0
+        preemptible: 1
     }
 
 
